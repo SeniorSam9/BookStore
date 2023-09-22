@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BookStore.Models;
+using Microsoft.EntityFrameworkCore;
 // this file is the gateway between the this project and the database
 namespace BookStore.Data
 {
@@ -10,6 +11,20 @@ namespace BookStore.Data
         {
 
         }
-        // 
+        // this line alone is enough to create a table with name (Categories) in the db
+        public DbSet<Category> Categories { get; set; }
+
+        // model builder allows us to deal with the data exists in the DB
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // here is a new update
+            // hence we need to add migration
+            modelBuilder.Entity<Category>().HasData(new Category
+            {
+                Id = 1,
+                Name = "Action",
+                DisplayOrder = 1,
+            });
+        }
     }
 }

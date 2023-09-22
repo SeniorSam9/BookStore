@@ -3,12 +3,20 @@
  it is like server.js in Express JS
  
  */
+using BookStore.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<ApplicationDbContext>(dbContextOptions =>
+       {
+           dbContextOptions.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+       });
+    
+
 
 var app = builder.Build();
 

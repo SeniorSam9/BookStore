@@ -27,6 +27,7 @@ namespace BookStore.Controllers
             // checks the view folder with the same name as the controller
             // if return View("Privacy");
             // it will render privacy page
+            // views are replaced with @RenderBody in _layout file
             return View();
         }
 

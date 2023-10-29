@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace BookStore.Models
 {
@@ -12,7 +13,14 @@ namespace BookStore.Models
         [Key] 
         public int Id { get; set; }
         [Required]
+        [DisplayName("Category Name")]
+        // server side validation 
+        // maximum string length of 30 chars
+        [MaxLength(30)]
         public string? Name { get; set; }
+        [DisplayName("Display Order")]
+        // display order number is from 1 to 100 only
+        [Range(1,100, ErrorMessage = "Hey DO must be between 1 and 100")]
         public int DisplayOrder { get; set; }
     }
 }

@@ -2,7 +2,7 @@
  This file is the starting point of the app
  it is like server.js in Express JS
  */
-using BookStore.Data;
+using BookStore.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

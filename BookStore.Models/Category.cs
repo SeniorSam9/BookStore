@@ -10,7 +10,7 @@ namespace BookStore.Models
         // primary key
         // however .net deals with any prop that has "Id" as a key by default
         // so [Key] is not required here
-        [Key] 
+        [Key]
         public int Id { get; set; }
         [Required]
         [DisplayName("Category Name")]
@@ -20,7 +20,7 @@ namespace BookStore.Models
         public string? Name { get; set; }
         [DisplayName("Display Order")]
         // display order number is from 1 to 100 only
-        [Range(1,100, ErrorMessage = "Hey DO must be between 1 and 100")]
+        [Range(1, 100, ErrorMessage = "Hey DO must be between 1 and 100")]
         public int DisplayOrder { get; set; }
     }
 }

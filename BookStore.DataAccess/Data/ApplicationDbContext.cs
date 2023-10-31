@@ -1,7 +1,7 @@
 ﻿using BookStore.Models;
 using Microsoft.EntityFrameworkCore;
 // this file is the gateway between the this project and the database
-namespace BookStore.Data
+namespace BookStore.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {

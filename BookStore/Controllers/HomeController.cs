@@ -29,7 +29,7 @@ namespace BookStore.Controllers
             // it will render privacy page
             // views are replaced with @RenderBody in _layout file
             return View();
-            
+
         }
 
         public IActionResult Privacy()

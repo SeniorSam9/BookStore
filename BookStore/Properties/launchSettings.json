@@ -14,9 +14,6 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5271",
       "environmentVariables": {
-        // it will use env vars in appsettings.Development.json
-        // so in production it will be changed to Production 
-        // to use appsettings.Production.json
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

@@ -1,7 +1,6 @@
 /*
- This file is the start point of the app
+ This file is the starting point of the app
  it is like server.js in Express JS
- 
  */
 using BookStore.Data;
 using Microsoft.EntityFrameworkCore;
